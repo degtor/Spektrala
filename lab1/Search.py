@@ -9,7 +9,8 @@ class Search():
 
 	def search_place(self):
 		t0 = time.time()
-		search_result = [place_obj for place_obj in self.objects_list if place_obj.name == self.search_input]
+         [x for x in lista if x.find(search_input) != 1]
+		search_result = [place_obj for place_obj in self.objects_list if place_obj.find(self.search_input) != 1]
 		search_time = time.time() - t0
 
 		if len(search_result) >= 1:
