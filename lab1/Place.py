@@ -1,4 +1,4 @@
-class Place(): #Klassen place skapar platsobjekt med nedastående variabler som attribut inlaesta fran fil.
+class Place(): #Klassen place skapar platsobjekt med nedastaende variabler som attribut inlaesta fran fil.
 	def __init__(self, name, description, latitude, longitude, update): #Klassen kraever dessa attribut vid initiering
 		self.name = name
 		self.description = description

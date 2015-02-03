@@ -32,16 +32,16 @@ class Process_data(): #Klass som hanterar inlasningen av data fran fil daer data
 		search_time = time.time() - t0 #Avslutar tidning och tar skillnad mellan tiden fran arsskiftet och naer sokningen startades.
 
 		if len(search_result) >= 1: #Om sokningen fick en eller flera traffar ska den skriva ut soktiden och vad sokningen hittade.
-			print('\nSökningen tog ' + str(search_time) + ' sekunder och gav ' + str(len(search_result)) + ' träffar:\n')
+			print('\nSokningen tog ' + str(search_time) + ' sekunder och gav ' + str(len(search_result)) + ' traeffar:\n')
 			for place_obj in search_result:
 				print(place_obj)
 				print('\n')
 		else:
-			print('\nSökningen gav inga träffar!\n')
+			print('\nSoekningen gav inga traeffar!\n')
 
 	def find_southmost(self): #Metod som hittar den plats som enligt koordinaterna aer placerad laengst soder ut.
 		t0 = time.time() #Start tidtagning
 		southmost_place = min(self.objects_list, key = attrgetter('latitude')) #Hittar med hjalp av attrgetter minsta vardet pa attributen latitude.
 		search_time = time.time() - t0 #Avslutar tidtagning
-		print('\nSökningen tog ' + str(search_time) + ' sekunder\n')
+		print('\nSoekningen tog ' + str(search_time) + ' sekunder\n')
 		print(southmost_place)
