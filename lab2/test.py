@@ -1,1 +1,5 @@
-Nu har jag endrat ngt
+a = 1
+
+a += 1
+
+print(a)

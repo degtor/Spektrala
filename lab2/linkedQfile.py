@@ -1,50 +1,45 @@
-class LinkedQ(object):
+class LinkedQ():
 
-    def __init__(self, first, last):
-        self.head = None
-        self.first = first
-        self.last = last
-        """Vilka attribut ska kön ha?"""
+   def __init__(self):
+      self.first = None
+      self.last = None
 
-    def __str__(self):
-	"""Returnerar köns element som en sträng."""
-        s = ""
-        p = self.first
-        while p != None:
-            s = s + str(p.value)
-            p = p.next
-        return s
+   def __str__(self):
+      s = ''
+      p = self.first
+      while p != None:
+         s = s + str(p.value) + ' '
+         p = p.next
+      return s
 
-    def put(self, item):
-        x = Node(item)
-        x.addNext(self.head)
-        self.head = x
-        """Stoppar in item sist i kön """
+   def put(self,x):
+      node = Node(x)
+      if self.first is None:
+         self.first = self.last = node
+      else:
+         self.last.next = self.last = node
 
-    def get(self):
-        y = self.top.value
-        self.top = self.top.next
-        return y
-        """Plockar ut och returnerar det som står först i kön """
+   def get(self):
+      x = self.first.value
+      self.first = self.first.next
+      return x
 
-    def isEmpty(self):
-        return self.head == None
-        """Returnerar True om kön är tom, False annars """
-        
-class Node:
-    
-    def __init__(self, dataValue):
-        self.value = dataValue
-        self.next = None
-        
-    def getValue(self):
-        return self.value
-        
-    def nextNode(self):
-        return self.next
-    
-    def addNext(self, newNext):
-        self.next = newNext
-    
-    def addValue(self, newValue):
-        self.value = newValue
+   def isEmpty(self):
+      return self.first == None
+
+   def magicSort(self):
+      s = ''
+      while not self.isEmpty():
+         self.put(self.get())
+         p = self.get()
+         s = s + str(p) + ' '
+      return s
+
+class Node():
+
+   def __init__(self, x):
+      self.value = x
+      self.next = None
+
+   def __str__(self):
+      return str(self.value)
