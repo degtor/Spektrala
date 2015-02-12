@@ -8,13 +8,6 @@ def main():
     x = Sort(numbers)
     print(x.sortedList)
 
-#if __name__== "main":
-    #Skapar en queue, init saeger att den ska skapas tom. isEmpty kollar att den aer tom.
-    #q = ListQ()
-    #  if q.isEmpty():
-     #     print("q.isEmpty() ger raett svar.")
-     # else:
-     #     print("q.isEmpty() ger FEL svar".)
 main()
 
     
