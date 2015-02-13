@@ -9,4 +9,5 @@ class ListQ:
         self.items.append(item)
 
     def get(self):
-        return self.items.pop(0)
+        return self.items.pop(0) #Returnerar forsta vardet i koen.
+        

@@ -1,4 +1,4 @@
-from sandbox import LinkedQ
+from linkedQfile import LinkedQ
 
 def main():
 	question = input("Du har 5 kort. I vilken ordning vill du laegga dessa?")
