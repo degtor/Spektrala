@@ -17,6 +17,4 @@ def main():
 	x = Sort(numbers)
 	print(x)
 
-main()
-
-    
+main()    
