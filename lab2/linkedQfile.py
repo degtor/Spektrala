@@ -23,7 +23,7 @@ class LinkedQ():
    def isEmpty(self): #Kollar om listan aer tom.
       return self.first == None #Forsoker returnera att forstaplatsen aer tom, ger False om self.first != None, True annars.
 
-   def removeLast(self):
+   def removeLast(self): #Tar bort sista elementet i listan
       node = self.first
       for i in range(self.length - 2):
          node = node.next
@@ -37,7 +37,7 @@ class LinkedQ():
       self.length -= 1
       return x
 
-   def putFirst(self,x):
+   def putFirst(self,x): #skapar en nod av in-vardet och lagger in forst i listan.
       node = Node(x, self.first)
       self.first = node
       if self.last is None:
