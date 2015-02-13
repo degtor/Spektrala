@@ -1,5 +1,20 @@
-a = 1
+from linkedQfile import LinkedQ
 
-a += 1
+linkA = LinkedQ()
+linkB = LinkedQ()
 
-print(a)
+antal_kort = 7
+
+for n in range(1,antal_kort + 1):
+	linkA.putFirst(n)
+
+linkB.putLast(linkA.getFirst())
+linkB.putFirst(linkB.last)
+linkB.removeLast()
+
+while not linkA.isEmpty():
+	linkB.putFirst(linkA.getFirst())
+	linkB.putFirst(linkB.last)
+	linkB.removeLast()
+
+print(linkB)
