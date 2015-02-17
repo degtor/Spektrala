@@ -1,5 +1,7 @@
-a = 'kebab'
-b = None
+a = 'lol'
+b = a[::-1]
 
-if a == b:
-	print('nice')
+c = ['babek', 'korv', 'lol']
+
+if b in c and b != b[::-1]:
+	print('rätt')

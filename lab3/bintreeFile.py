@@ -46,21 +46,27 @@ def putFunc(root, newvalue):
 def existsFunc(root, searchvalue):
 	if root is None:
 		return False
+	# Om trädet är tomt kan ordet omöjligt finnas och funktionen returnerar False
 	
 	elif root.value == searchvalue:
 		return True
+	# Om root har samma värde som det sökta värdet har vi hittat det vi sökte och funktionen returnerar True
 	
 	elif searchvalue < root.value and root.left:
 		return existsFunc(root.left, searchvalue)
+	# Om root har ett barn åt vänster och det vi söker är mindre än värdet på root kallar vi på funktionen igen med barnet som root 
 	
 	elif searchvalue > root.value and root.right:
 		return existsFunc(root.right, searchvalue)
+	# Samma sak om det vi söker är större än värdet på root
 	
 	else:
 		return False
 
 def writeFunc(root):
+	# Skriver ut trädet i ordningen genom att först skriva ut den vänstra delen av trädet, root och slutligen den högra delen av trädet
 	if root:
+	# Så länge root inte är None går vi nedåt i trädet, annars hoppar vi upp en nivå
 		writeFunc(root.left)
 		print(root.value)
 		writeFunc(root.right)
