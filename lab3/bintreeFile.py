@@ -1,3 +1,5 @@
+import time
+
 class Bintree():
     def __init__(self):
         self.root = None
@@ -7,7 +9,7 @@ class Bintree():
 
     def exists(self,value):
         return existsFunc(self.root,value)
-
+        
     def write(self):
         writeFunc(self.root)
         print("\n")
@@ -22,6 +24,28 @@ class Node():
         return str(self.value)
 
 def putFunc(root, newvalue):
+    """  DOCTEST
+    Testar putfunktionen,
+    -- Skapas ny root raett med hjaelp av Node? --
+    >>> root = Node("apa")
+    >>> x = putFunc(None, "apa")
+    >>> x.__str__()
+    'apa'
+    
+    -- Kollar sa att noderna laggs i rattordning --
+    -- .right? --
+    >>> newvalue = 'hest'
+    >>> y = putFunc(root, newvalue)
+    >>> y.right.__str__()
+    'hest'
+    
+    
+    -- .left? --
+    >>> newvalue = 'a'
+    >>> y = putFunc(root, newvalue)
+    >>> y.left.__str__()
+    'a'
+    """
     if root is None:
         root = Node(newvalue)
     # Om trädet är tomt lagras ordet som root
@@ -44,10 +68,25 @@ def putFunc(root, newvalue):
     # Returnerar root för att skriva över objektets self.root-attribut
 
 def existsFunc(root, searchvalue):
+<<<<<<< HEAD
     if root is None:
         return False
     # Om trädet är tomt kan ordet omöjligt finnas och funktionen returnerar False
     
+=======
+    """ DOCTEST
+    Testar existsfunktionen,
+    >>> a = Node("hej")
+    >>> existsFunc(None, a)
+    False
+    >>> existsFunc(a, str(a))
+    True"""
+    
+    if root is None:
+        return False
+    # Om trädet är tomt kan ordet omöjligt finnas och funktionen returnerar False
+
+>>>>>>> 21da2736d026dbb85f54511314f6ad63b9551424
     elif root.value == searchvalue:
         return True
     # Om root har samma värde som det sökta värdet har vi hittat det vi sökte och funktionen returnerar True

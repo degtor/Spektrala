@@ -1,4 +1,5 @@
 from bintreeFile import Bintree
+from bintreeFile import Node
 
 def main():
 	svenska = Bintree()
