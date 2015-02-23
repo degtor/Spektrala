@@ -68,6 +68,12 @@ def putFunc(root, newvalue):
     # Returnerar root för att skriva över objektets self.root-attribut
 
 def existsFunc(root, searchvalue):
+<<<<<<< HEAD
+    if root is None:
+        return False
+    # Om trädet är tomt kan ordet omöjligt finnas och funktionen returnerar False
+    
+=======
     """ DOCTEST
     Testar existsfunktionen,
     >>> a = Node("hej")
@@ -80,6 +86,7 @@ def existsFunc(root, searchvalue):
         return False
     # Om trädet är tomt kan ordet omöjligt finnas och funktionen returnerar False
 
+>>>>>>> 21da2736d026dbb85f54511314f6ad63b9551424
     elif root.value == searchvalue:
         return True
     # Om root har samma värde som det sökta värdet har vi hittat det vi sökte och funktionen returnerar True
